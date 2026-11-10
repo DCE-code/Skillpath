@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkillPath — a clean, responsive learning dashboard for tracking training and projects.">
+  <meta name="theme-color" content="#f2f0ea">
+  <title>SkillPath — Learning Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#" aria-label="SkillPath home"><span class="brand-mark">S</span><span>skillpath<span class="brand-dot">.</span></span></a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <a class="nav-link active" href="#overview" data-view="overview"><span class="nav-icon">⌂</span> Overview</a>
+        <a class="nav-link" href="#courses" data-view="courses"><span class="nav-icon">▤</span> My learning</a>
+        <a class="nav-link" href="#projects" data-view="projects"><span class="nav-icon">◇</span> Projects <span class="nav-count">2</span></a>
+        <a class="nav-link" href="#schedule" data-view="schedule"><span class="nav-icon">▦</span> Schedule</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✦</div><strong>Keep moving forward</strong><p>Small steps every day lead to real progress.</p><a href="#projects">View your goals <span>→</span></a></div>
+        <button class="profile-button" type="button" aria-label="Profile for Alex Morgan"><span class="avatar">AM</span><span class="profile-copy"><strong>Alex Morgan</strong><small>Student account</small></span><span class="more">•••</span></button>
+      </div>
+    </aside>
+
+    <main id="main" class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="pageLabel">Overview</strong></div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><button class="icon-button" id="themeToggle" aria-label="Toggle colour theme" title="Toggle theme">◐</button><button class="avatar top-avatar" aria-label="Your profile">AM</button></div>
+      </header>
+
+      <section class="page-view" id="overviewView">
+        <div class="welcome-row"><div><p class="eyebrow">TUESDAY, YOUR LEARNING SPACE</p><h1>Good morning, Alex <span class="wave">✦</span></h1><p class="muted">A little progress today makes a big difference tomorrow.</p></div><button class="primary-button" id="continueTop">Continue learning <span>→</span></button></div>
+        <section class="hero-card">
+          <div class="hero-copy"><span class="pill light-pill">YOUR LEARNING JOURNEY</span><h2>Build skills.<br><em>Make things happen.</em></h2><p>Stay focused on your goals, keep your momentum, and turn what you learn into practical projects.</p><button class="hero-button" id="exploreCourses">Explore learning <span>↗</span></button></div>
+          <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-card"><span class="art-spark">✳</span><div class="art-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-caption">IDEAS IN ACTION</div></div><div class="floating-note">✦ &nbsp; Keep growing</div></div>
+        </section>
+
+        <div class="section-heading"><div><p class="eyebrow">YOUR PROGRESS</p><h2>Learning at a glance</h2></div><button class="text-button" data-go="courses">View all learning →</button></div>
+        <section class="stats-grid" aria-label="Learning statistics">
+          <article class="stat-card"><div class="stat-top"><span>Active courses</span><span class="stat-icon blue">▤</span></div><strong>04</strong><small><span class="positive">+1</span> this month</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Hours learned</span><span class="stat-icon tan">◷</span></div><strong>28.5</strong><small>Across all courses</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Projects done</span><span class="stat-icon green">◇</span></div><strong>06</strong><small>Keep building</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Current streak</span><span class="stat-icon pink">✦</span></div><strong>05 <small class="unit">days</small></strong><small>You're on a roll</small></article>
+        </section>
+
+        <div class="content-grid">
+          <section class="panel course-panel" id="courses">
+            <div class="panel-heading"><div><p class="eyebrow">PICK UP WHERE YOU LEFT OFF</p><h2>Continue learning</h2></div><button class="more-button" aria-label="More course options">•••</button></div>
+            <article class="course-item"><div class="course-thumb thumb-blue"><span>〈/〉</span></div><div class="course-info"><div class="course-meta"><span>DEVELOPMENT</span><span>65% complete</span></div><h3>Frontend foundations</h3><p>HTML, CSS & responsive layouts</p><div class="progress-track"><span style="width:65%"></span></div></div><button class="round-arrow" data-course="Frontend foundations" aria-label="Continue Frontend foundations">↗</button></article>
+            <article class="course-item"><div class="course-thumb thumb-sand"><span>✎</span></div><div class="course-info"><div class="course-meta"><span>DESIGN</span><span>32% complete</span></div><h3>UI design essentials</h3><p>Visual hierarchy and user experience</p><div class="progress-track"><span style="width:32%"></span></div></div><button class="round-arrow" data-course="UI design essentials" aria-label="Continue UI design essentials">↗</button></article>
+            <article class="course-item"><div class="course-thumb thumb-green"><span>{ }</span></div><div class="course-info"><div class="course-meta"><span>PROGRAMMING</span><span>18% complete</span></div><h3>JavaScript in practice</h3><p>Logic, events and interactive interfaces</p><div class="progress-track"><span style="width:18%"></span></div></div><button class="round-arrow" data-course="JavaScript in practice" aria-label="Continue JavaScript in practice">↗</button></article>
+          </section>
+
+          <section class="panel activity-panel">
+            <div class="panel-heading"><div><p class="eyebrow">YOUR WEEK</p><h2>Learning activity</h2></div><span class="select-label">This week⌄</span></div>
+            <div class="activity-total"><strong>8.5 <small>hrs</small></strong><span class="positive">↑ 12%</span><small>vs. last week</small></div>
+            <div class="chart" role="img" aria-label="Weekly learning activity: Monday 1 hour, Tuesday 2 hours, Wednesday 1.5 hours, Thursday 2.5 hours, Friday 1 hour, Saturday 0.5 hours, Sunday 0 hours."><div class="chart-column"><i style="height:34%"></i><small>Mon</small></div><div class="chart-column"><i style="height:68%"></i><small>Tue</small></div><div class="chart-column"><i style="height:50%"></i><small>Wed</small></div><div class="chart-column active"><i style="height:88%"></i><small>Thu</small></div><div class="chart-column"><i style="height:40%"></i><small>Fri</small></div><div class="chart-column"><i style="height:22%"></i><small>Sat</small></div><div class="chart-column"><i style="height:8%"></i><small>Sun</small></div></div>
+            <div class="chart-footer"><span><i class="legend-dot"></i> Learning hours</span><span>Goal: 10 hrs/week</span></div>
+          </section>
+        </div>
+
+        <div class="content-grid lower-grid">
+          <section class="panel project-panel" id="projects"><div class="panel-heading"><div><p class="eyebrow">LEARN BY DOING</p><h2>Project checklist</h2></div><span class="mini-badge">2 in progress</span></div>
+            <label class="task-row"><input type="checkbox" class="task-check"><span class="task-text"><strong>Plan your responsive layout</strong><small>Frontend project · Step 1</small></span><span class="task-status">To do</span></label>
+            <label class="task-row"><input type="checkbox" class="task-check" checked><span class="task-text"><strong>Set up semantic HTML structure</strong><small>Frontend project · Step 2</small></span><span class="task-status done">Done</span></label>
+            <label class="task-row"><input type="checkbox" class="task-check"><span class="task-text"><strong>Build mobile navigation</strong><small>Frontend project · Step 3</small></span><span class="task-status">To do</span></label>
+            <label class="task-row"><input type="checkbox" class="task-check"><span class="task-text"><strong>Test tablet and desktop layouts</strong><small>Frontend project · Step 4</small></span><span class="task-status">To do</span></label>
+          </section>
+          <section class="panel schedule-panel" id="schedule"><div class="panel-heading"><div><p class="eyebrow">UP NEXT</p><h2>Today's schedule</h2></div><span class="calendar-icon">▦</span></div><div class="event-row"><div class="event-time">10:00<small>AM</small></div><div class="event-line"></div><div class="event-copy"><strong>HTML & accessibility</strong><small>Learning session · 45 min</small></div></div><div class="event-row"><div class="event-time">02:30<small>PM</small></div><div class="event-line"></div><div class="event-copy"><strong>Project work time</strong><small>Practice · 1 hour</small></div></div><button class="outline-button" id="addSession">+ Add a study session</button></section>
+        </div>
+        <footer class="footer"><span>© 2026 SkillPath</span><span>Designed for steady progress <b>✦</b></span></footer>
+      </section>
+
+      <section class="page-view alternate-view" id="coursesView" hidden><p class="eyebrow">YOUR LIBRARY</p><h1>My learning</h1><p class="muted">Your courses in one place. Choose a course to continue.</p><div class="library-grid"><article class="library-card"><div class="course-thumb thumb-blue">〈/〉</div><h3>Frontend foundations</h3><p>HTML, CSS & responsive layouts</p><span class="library-progress">65% complete</span><div class="progress-track"><span style="width:65%"></span></div><button class="primary-button small-button" data-course="Frontend foundations">Continue →</button></article><article class="library-card"><div class="course-thumb thumb-sand">✎</div><h3>UI design essentials</h3><p>Visual hierarchy and user experience</p><span class="library-progress">32% complete</span><div class="progress-track"><span style="width:32%"></span></div><button class="primary-button small-button" data-course="UI design essentials">Continue →</button></article><article class="library-card"><div class="course-thumb thumb-green">{ }</div><h3>JavaScript in practice</h3><p>Logic, events and interactive interfaces</p><span class="library-progress">18% complete</span><div class="progress-track"><span style="width:18%"></span></div><button class="primary-button small-button" data-course="JavaScript in practice">Continue →</button></article></div></section>
+      <section class="page-view alternate-view" id="projectsView" hidden><p class="eyebrow">PRACTICAL EXPERIENCE</p><h1>Your projects</h1><p class="muted">Turn lessons into work you can show.</p><div class="panel standalone-panel"><h2>Responsive frontend interface</h2><p class="muted">Build a mobile-first web application using semantic HTML, CSS Grid, Flexbox and basic JavaScript.</p><div class="project-steps"><div>01 <span>Discovery & wireframe</span></div><div>02 <span>Semantic HTML</span></div><div>03 <span>Responsive styling</span></div><div>04 <span>JavaScript interactions</span></div><div>05 <span>Accessibility & quality audit</span></div></div></div></section>
+      <section class="page-view alternate-view" id="scheduleView" hidden><p class="eyebrow">PLAN YOUR TIME</p><h1>Schedule</h1><p class="muted">A simple plan helps you stay consistent.</p><div class="panel standalone-panel"><h2>Today's sessions</h2><div id="scheduleList"><p class="schedule-entry">10:00 AM — HTML & accessibility</p><p class="schedule-entry">02:30 PM — Project work time</p></div><button class="primary-button" id="addSessionAlt">+ Add a study session</button></div></section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="sessionDialog"><form method="dialog" id="sessionForm"><div class="dialog-head"><div><p class="eyebrow">MAKE TIME TO LEARN</p><h2>Add a session</h2></div><button class="close-dialog" aria-label="Close">×</button></div><label>Session title<input id="sessionTitle" required maxlength="60" placeholder="e.g. Practice CSS Grid"></label><label>Start time<input id="sessionTime" type="time" required value="16:00"></label><div class="dialog-actions"><button class="outline-button" value="cancel">Cancel</button><button class="primary-button" id="saveSession" value="default">Add session</button></div></form></dialog>
+</body>
+</html>
